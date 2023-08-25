@@ -5,24 +5,24 @@
 public class SumPairCount {
     public static int countPairsWithSum(int[] arr, int X) {
         int count = 0; 
-        int left = 0; // front
-        int right = arr.length - 1; // back
+        int front = 0; // front half of arr
+        int back = arr.length - 1; // back half of arr
         
         // Use two pointers to find pairs that sum to X 
-        while (left < right) 
+        while (front < back) // while front half and back half don't cross over
         {
-            int currentSum = arr[left] + arr[right];
+            int currentSum = arr[front] + arr[back];
             if (currentSum == sum) 
             {
                 count++;
             }
             if (currentSum <= sum) 
             {
-                left++;
+                front++;
             } 
             else 
             {
-                right--;
+                back--;
             }
         }
         

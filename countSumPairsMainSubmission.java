@@ -12,11 +12,11 @@ public class SumPairCount {
         while (front < back) // while front half and back half don't cross over
         {
             int currentSum = arr[front] + arr[back];
-            if (currentSum == sum) 
+            if (currentSum == X) 
             {
                 count++;
             }
-            if (currentSum <= sum) 
+            if (currentSum <= X) 
             {
                 front++;
             } 
